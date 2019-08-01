@@ -1,1 +1,10 @@
 .vscode
+.DS_Store
+
+.terraform
+terraform.tfvars
+*.tfstate
+*.tfstate.backup
+*.log
+.terraform.tfstate.lock.info
+!core/terraform.tfvars
