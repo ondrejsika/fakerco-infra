@@ -8,3 +8,5 @@ terraform.tfvars
 *.log
 .terraform.tfstate.lock.info
 !core/terraform.tfvars
+!prod/terraform.tfvars
+!dev/terraform.tfvars
