@@ -58,3 +58,23 @@ resource "cloudflare_record" "faker_cz__mail1_mx" {
 }
 
 // END ZONE faker.cz
+
+// BEGIN ZONE fakermail.cz
+
+resource "cloudflare_zone" "fakermail_cz" {
+  provider = "cloudflare.prod"
+
+  zone = "fakermail.cz"
+}
+
+resource "cloudflare_record" "fakermail_cz__mail1_mx" {
+  provider = "cloudflare.prod"
+
+  domain = "${cloudflare_zone.fakermail_cz.zone}"
+  name    = "@"
+  value   = "mail.oxs.cz"
+  type    = "MX"
+  priority = "99"
+}
+
+// END ZONE fakermail.cz
